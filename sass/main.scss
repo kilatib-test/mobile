@@ -1,0 +1,13 @@
+/* vendor */
+@import "kendo";
+/* @vendor */
+
+/** partial */
+@import "partial/color";
+@import "partial/text";
+@import "partial/button";
+@import "partial/layout";
+@import "partial/form";
+/** @partial */
+
+@import "module/default/bootstrap";

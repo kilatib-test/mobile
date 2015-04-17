@@ -1,0 +1,76 @@
+@mixin button-gradient($defaultColor, $startColor, $stopColor ) {
+  background-color: $defaultColor;
+  background-image: -ms-linear-gradient(top, $startColor 0%, $stopColor 100%);
+  background-image: -moz-linear-gradient(top, $startColor 0%, $stopColor 100%);
+  background-image: -o-linear-gradient(top, $startColor 0%, $stopColor 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $startColor), color-stop(1, $stopColor));
+  background-image: -webkit-linear-gradient(top, $startColor 0%, $stopColor 100%);
+  background-image: linear-gradient(to bottom, $startColor 0%, $stopColor 100%);
+}
+
+.button-blue {
+  display: inline-block;
+  background-color: #eefbff;
+  color: $color-blue;
+  font-size: 10pt;
+  padding: 8px 10px 8px;
+}
+
+.button-blue.selected,
+.button-blue:hover {
+  background-color: #d9f7ff;
+}
+
+@mixin button ($name, $textColor: #ffffff, $bgColor: transparent) {
+  .#{$name}-btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    color: $textColor !important;
+    background-color: $bgColor;
+    text-decoration: none !important;
+    border: none;
+
+    &.big {
+      font-size: 1.5em;
+      line-height: 3em;
+      width: 7em;
+    }
+
+    span {
+      line-height: 1em;
+      margin: 1em;
+    }
+
+    &.right-space {
+      margin-right: .5em;
+    }
+
+    &.right-angle {
+      position: relative;
+    }
+
+    &.right-angle::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -19px;
+      border-top: 16px solid transparent;
+      border-bottom: 21px solid transparent;
+      border-left: 2em solid;
+      right: -1.9em;
+      z-index: 2;
+      border-left-color: $bgColor;
+    }
+
+    &:hover {
+      background-color: $bgColor;
+    }
+  }
+
+}
+@include button('red', #ffffff, #fc4c59);
+@include button('gray', #015583, #f3f3f3);
+@include button('white', $color-blue, #ffffff);
+@include button('pink', #ff0013, #ffe6e7);

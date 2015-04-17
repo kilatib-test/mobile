@@ -1,0 +1,21 @@
+html, body, #ng-view {
+  height: 100%;
+  font-size: $font-small;
+
+  a {
+    text-decoration: none;
+    color: #00ccff;
+    font-size: 1rem;
+  }
+}
+
+.header-logo {
+  display: block;
+  margin: 2em auto 0;
+
+}
+
+.action-set {
+  text-align: center;
+  width: 100%;
+}

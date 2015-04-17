@@ -1,0 +1,45 @@
+.carousel-wrap {
+  min-height: 25em;
+  text-align: center;
+  position: relative;
+  margin: 1em 0 1em 0;
+
+  .km-wp {
+    .carousel-slide {
+      min-height: 15em;
+    }
+  }
+
+  .km-pages {
+    li {
+      height: .7em;
+      width: .7em;
+      color: #e5e5e5;
+      background-color: #e5e5e5;
+    }
+
+    .km-current-page {
+      color: #01ccfe;
+      background-color: #01ccfe;
+    }
+  }
+
+  .carousel-slide {
+    width: 100%;
+    min-height: 365px;
+    min-width: 285px;
+    display: inline-block;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .text {
+    white-space: normal;
+    line-height: 1.2em;
+  }
+}

@@ -1,0 +1,19 @@
+$font-family: Verdana, Arial, Tahoma;
+$font-small: 1rem;
+$font-middle: 1.3rem;
+$font-big: 2rem;
+$font-large: 2.5rem;
+
+
+h2 {
+  color: $color-blue;
+  font-size: $font-middle;
+  padding: 0;
+  margin: 2rem 0 1rem 0;
+}
+
+.text {
+  color: $color-text-gray;
+  padding: 0;
+  margin: 0;
+}
